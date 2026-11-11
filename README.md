@@ -29,7 +29,7 @@
 ```text
 FOMI/
 ├── frontend/                 # React Native · Expo 앱
-│   ├── app/                  # Expo Router 화면 경로
+│   ├── src/app/              # Expo Router 화면 경로
 │   ├── src/
 │   │   ├── features/         # auth, chat, tasks, guide, album, rewards, profile
 │   │   ├── components/       # 공통 UI · 레이아웃
@@ -55,7 +55,7 @@ FOMI/
 └── .github/                  # PR 템플릿
 ```
 
-현재는 폴더 구조와 가이드를 준비한 단계이며 실행 가능한 앱·서버는 아직 초기화하지 않았습니다. 빈 폴더의 `.gitkeep`은 실제 파일을 추가할 때 삭제할 수 있습니다.
+Expo 앱과 Spring Boot 서버를 초기화했습니다. [개발 환경 실행 가이드](docs/development.md)를 참고하세요. 빈 폴더의 `.gitkeep`은 실제 파일을 추가할 때 삭제할 수 있습니다.
 
 - [프론트 구조와 준비 사항](frontend/README.md)
 - [백엔드 구조와 준비 사항](backend/README.md)

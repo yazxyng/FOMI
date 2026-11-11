@@ -1,6 +1,6 @@
 # FOMI Backend
 
-Spring Boot / Java / Gradle 백엔드를 위한 패키지 구조입니다. 아직 Spring Initializr 프로젝트, Gradle Wrapper, 애플리케이션 진입점과 실행 설정은 포함되어 있지 않습니다.
+Spring Boot / Java / Gradle 백엔드를 위한 패키지 구조입니다. Spring Initializr와 Gradle Wrapper를 구성했습니다. 실행 방법은 [개발 환경 가이드](../docs/development.md)를 참고하세요.
 
 ## 패키지 역할
 
@@ -16,11 +16,9 @@ Spring Boot / Java / Gradle 백엔드를 위한 패키지 구조입니다. 아�
 - `src/main/resources`: 애플리케이션 설정.
 - `src/test/java/com/fomi`: 운영 코드 패키지 구조에 맞춘 테스트.
 
-## 초기화할 때
+## 실행
 
-Spring Initializr에서 Java / Gradle 프로젝트를 생성하고 `com.fomi`를 기본 패키지로 설정합니다. Web, Validation, Security, OAuth2 Resource Server, Data JPA, PostgreSQL Driver, Actuator를 초기 의존성 후보로 검토합니다. 사용하는 Java·Spring Boot 버전은 초기화 시 지원 범위를 확인해 확정하고 Gradle Wrapper를 커밋합니다.
-
-`.env.example`은 변수 목록입니다. Spring Boot가 이 파일을 자동으로 읽는다는 뜻은 아닙니다. IDE 실행 설정이나 배포 서비스에서 환경변수를 주입하고 `application.yml`에서 매핑해야 합니다. 배포 시 서버 포트는 플랫폼의 `PORT`에 연결합니다.
+[개발 환경 가이드](../docs/development.md)를 참고하세요.
 
 ## 인증과 DB 경계
 
