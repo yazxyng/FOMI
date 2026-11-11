@@ -9,7 +9,8 @@
 
 포미는 일상 기록과 실행을 지원하며 의료 진단·치료를 제공하거나 효과를 주장하지 않습니다.
 
-## 기술 구성
+<details>
+<summary><strong>기술 구성</strong></summary>
 
 | 영역 | 기술 |
 | --- | --- |
@@ -20,7 +21,10 @@
 
 팀은 개발자 3명, 디자이너 2명으로 구성됩니다. 앱과 백엔드는 한 레포에서 관리하며 각각 배포합니다.
 
-## 파일 구조
+</details>
+
+<details>
+<summary><strong>파일 구조</strong></summary>
 
 ```text
 FOMI/
@@ -60,7 +64,10 @@ FOMI/
 
 GitHub 협업은 하나의 레포에서 진행하고 앱과 서버의 빌드·배포는 각 디렉터리를 기준으로 분리합니다. 기존 커밋 scope `mobile`은 `frontend/`, `backend`는 `backend/`, `db`는 `supabase/` 변경에 사용합니다.
 
-## 커밋 규칙
+</details>
+
+<details>
+<summary><strong>커밋 규칙</strong></summary>
 
 ```text
 type(scope): 변경 내용
@@ -91,7 +98,10 @@ design(mobile): 할 일 카드 여백 조정
 docs(repo): 커밋 규칙과 PR 규칙 추가
 ```
 
-## 브랜치와 PR 규칙
+</details>
+
+<details>
+<summary><strong>브랜치와 PR 규칙</strong></summary>
 
 1. `main`을 기준으로 작업 브랜치를 만듭니다. 예: `feat/12-mood-chat`, `fix/23-login`, `docs/commit-rules`.
 2. `main`에 직접 push하지 않고 PR로 변경을 반영합니다.
@@ -114,3 +124,5 @@ docs(repo): 커밋 규칙과 PR 규칙 추가
 - 필요한 환경변수 이름은 실제 값 없이 `.env.example` 등으로 공유합니다.
 
 > 이 문서와 PR 템플릿은 팀 협업 규칙입니다. 직접 push 제한·승인 필수 조건·Squash merge 방식은 GitHub 저장소 설정에서 별도로 적용해야 합니다. 현재 자동 검사나 브랜치 보호가 설정되었다는 뜻은 아닙니다.
+
+</details>
