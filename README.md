@@ -20,6 +20,46 @@
 
 팀은 개발자 3명, 디자이너 2명으로 구성됩니다. 앱과 백엔드는 한 레포에서 관리하며 각각 배포합니다.
 
+## 파일 구조
+
+```text
+FOMI/
+├── frontend/                 # React Native · Expo 앱
+│   ├── app/                  # Expo Router 화면 경로
+│   ├── src/
+│   │   ├── features/         # auth, chat, tasks, guide, album, rewards, profile
+│   │   ├── components/       # 공통 UI · 레이아웃
+│   │   ├── lib/              # API · Supabase 클라이언트
+│   │   ├── hooks/
+│   │   ├── stores/
+│   │   ├── theme/
+│   │   ├── types/
+│   │   └── utils/
+│   ├── assets/               # 이미지 · 폰트 · 기존 캐릭터 원본
+│   └── tests/
+├── backend/                  # Spring Boot 서버
+│   └── src/
+│       ├── main/
+│       │   ├── java/com/fomi/
+│       │   │   ├── domain/   # 도메인별 controller/service/repository/entity/dto
+│       │   │   ├── global/   # 설정 · 보안 · 공통 예외 · 응답
+│       │   │   └── infrastructure/ # Gemini · Dify · 저장소 연동
+│       │   └── resources/
+│       └── test/java/com/fomi/
+├── supabase/                 # SQL 마이그레이션 · DB 테스트
+├── docs/                     # 기획 · 디자인 · API · 테스트 · 배포 문서
+└── .github/                  # PR 템플릿
+```
+
+현재는 폴더 구조와 가이드를 준비한 단계이며 실행 가능한 앱·서버는 아직 초기화하지 않았습니다. 빈 폴더의 `.gitkeep`은 실제 파일을 추가할 때 삭제할 수 있습니다.
+
+- [프론트 구조와 준비 사항](frontend/README.md)
+- [백엔드 구조와 준비 사항](backend/README.md)
+- [Supabase 관리 기준](supabase/README.md)
+- [문서 작성 위치](docs/README.md)
+
+GitHub 협업은 하나의 레포에서 진행하고 앱과 서버의 빌드·배포는 각 디렉터리를 기준으로 분리합니다. 기존 커밋 scope `mobile`은 `frontend/`, `backend`는 `backend/`, `db`는 `supabase/` 변경에 사용합니다.
+
 ## 커밋 규칙
 
 ```text

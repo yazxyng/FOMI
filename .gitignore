@@ -1,0 +1,40 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+application-local.yml
+application-local.yaml
+*.pem
+*.key
+*.p12
+*.p8
+*.jks
+*.keystore
+
+# JavaScript / Expo
+node_modules/
+.expo/
+dist/
+web-build/
+coverage/
+npm-debug.log*
+yarn-error.log*
+frontend/android/
+frontend/ios/
+
+# Java / Gradle
+.gradle/
+build/
+out/
+*.class
+
+# Supabase local state
+supabase/.temp/
+supabase/.branches/
+
+# Editors / OS
+.idea/
+*.iml
+.DS_Store
+*.log
