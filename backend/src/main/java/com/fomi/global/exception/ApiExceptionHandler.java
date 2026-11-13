@@ -8,6 +8,9 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.*;
 @RestControllerAdvice
 public class ApiExceptionHandler {
+    @ExceptionHandler(com.fomi.domain.auth.service.LoginService.InvalidCredentials.class)
+    ResponseEntity<?> credentials() { return ResponseEntity.status(401).body(Map.of("code", "INVALID_CREDENTIALS", "message", "아이디 또는 인증 정보를 확인해 주세요.")); }
+
     @ExceptionHandler(DuplicateUsernameException.class)
     ResponseEntity<?> duplicate() { return ResponseEntity.status(409).body(Map.of("code", "DUPLICATE_USERNAME", "message", "이미 사용 중인 아이디예요.")); }
     @ExceptionHandler(DataIntegrityViolationException.class)
